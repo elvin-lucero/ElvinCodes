@@ -1,0 +1,37 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.nav__logo {
+  text-transform: none;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+.nav__links {
+  display: flex;
+  column-gap: 30px;
+  list-style-type: none;
+  padding: 0;
+  margin: 20px;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  opacity: 50%;
+}
