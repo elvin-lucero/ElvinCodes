@@ -1,0 +1,43 @@
+.contacts {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  float: right;
+}
+
+.contacts__heading {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+}
+
+.contacts__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+}
+
+.contacts__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.contacts__link {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contacts__link:hover {
+  opacity: 0.7;
+}
