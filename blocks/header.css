@@ -2,6 +2,12 @@
   padding: 40px 40px;
 }
 
+.header__image {
+  width: 167px;
+  height: 167px;
+  margin: 120px 0 0;
+}
+
 .header__title {
   font-family: "Raleway", sans-serif;
   font-size: 48px;
@@ -10,10 +16,15 @@
   text-align: left;
   text-transform: uppercase;
   color: #aaaaaa;
-  margin: 120px 0;
+  margin: 20px 0;
 }
 
-.header__image {
-  width: 167px;
-  height: 167px;
+.header__description {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  text-align: left;
+  color: #aaaaaa;
+  margin: 0;
 }
