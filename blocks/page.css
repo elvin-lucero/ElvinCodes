@@ -1,6 +1,7 @@
 .page {
-  display: flex;
-  flex-direction: column;
+  background-color: #222;
+  color: #aaa;
+  font-family: "Raleway", sans-serif;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -8,4 +9,9 @@
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
+}
+
+.page__section {
+  max-width: 1280px;
+  margin: 0 auto;
 }

@@ -1,16 +1,7 @@
 @import url(../vendor/normalize.css);
+@import url(../blocks/fonts.css);
 @import url(../blocks/nav.css);
 @import url(../blocks/header.css);
 @import url(../blocks/footer.css);
 @import url(../blocks/content.css);
 @import url(../blocks/page.css);
-
-@font-face {
-  font-family: "Raleway";
-  src: url("https://practicum-content.s3.us-west-1.amazonaws.com/fonts/Raleway-ExtraBold.ttf");
-}
-
-body {
-  background-color: #222;
-  margin: 0;
-}

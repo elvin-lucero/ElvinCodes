@@ -5,12 +5,12 @@
     <meta name="description" content="Welcome to my personal portfolio!" />
     <meta name="keywords" content="HTML, CSS" />
     <meta name="author" content="Elvin's Portfolio" />
-    <title>Elvin's Portfolio</title>
+    <title>ElvinCodes</title>
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body>
     <div class="page">
-      <header class="header">
+      <header class="header page__section">
         <nav class="nav">
           <a href="#" class="nav__logo">Elvin__Codes</a>
           <ul class="nav__links">
@@ -40,15 +40,56 @@
           applications.
         </p>
       </header>
-      <main class="content">
-        <section class="content__skills skills" id="skills">
-          <h2 class="content__title">Skills/Resume/CV</h2>
+      <main class="content page__section">
+        <section class="skills" id="skills">
+          <h2 class="skills__title content__title">Skills/Resume/CV</h2>
         </section>
         <section class="projects" id="projects">
-          <h2 class="content__title">Projects</h2>
+          <h2 class="projects__title content__title">Projects</h2>
+          <ul class="projects__list">
+            <li class="project">
+              <img
+                src="./images/"
+                notes="Add image"
+                alt="Project Image"
+                class="project__image"
+              />
+              <div class="project__content">
+                <h3 class="project__title">Triple Peaks Library</h3>
+                <p class="project__description">Project Description</p>
+                <a href="#" class="project__link">View Project</a>
+              </div>
+            </li>
+            <li class="project">
+              <img
+                src="./images/"
+                notes="Add image"
+                alt="Project Image"
+                class="project__image"
+              />
+              <div class="project__content">
+                <h3 class="project__title">Coffee Shop</h3>
+                <p class="project__description">Project Description</p>
+                <a href="#" class="project__link">View Project</a>
+              </div>
+            </li>
+            <li class="project">
+              <img
+                src="./images/"
+                notes="Add image"
+                alt="Project Image"
+                class="project__image"
+              />
+              <div class="project__content">
+                <h3 class="project__title">Spots</h3>
+                <p class="project__description">Project Description</p>
+                <a href="#" class="project__link">View Project</a>
+              </div>
+            </li>
+          </ul>
         </section>
       </main>
-      <footer class="footer" id="footer">
+      <footer class="footer page__section" id="footer">
         <div class="footer__content">
           <a href="#" class="footer__title">Elvin__Codes</a>
           <div class="footer__contacts">
