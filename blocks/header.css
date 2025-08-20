@@ -4,6 +4,7 @@
 .header__image {
   max-width: 167px;
   max-height: 167px;
+  border-radius: 50% ;
 }
 
 .header__title {
