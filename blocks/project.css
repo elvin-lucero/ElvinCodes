@@ -6,8 +6,8 @@
 
 .project__image {
   display: block;
-  width: 160px;
-  max-width: 160px;
+  width: 100%;
+  max-width: 300px;
   height: auto;
   flex: 0 0 160px; /* fixed size so percentage-based circular sizing in flex children doesn't occur */
   object-fit: contain;
