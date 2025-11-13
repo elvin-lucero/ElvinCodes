@@ -1,4 +1,6 @@
 .content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .content__title {
@@ -7,4 +9,6 @@
   line-height: 23px;
   text-transform: uppercase;
   color: #daae1f;
+  display: inline-block;
+  text-align: inherit; /* respect parent text-align (e.g., center from .skills) */
 }
