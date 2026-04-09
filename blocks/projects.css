@@ -8,16 +8,21 @@
 }
 
 .projects__list {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 420px));
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
+  width: min(100%, 1200px);
   padding: 0;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .project {
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
