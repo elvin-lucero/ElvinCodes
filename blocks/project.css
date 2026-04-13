@@ -6,8 +6,8 @@
   max-width: 420px;
   padding: 20px;
   margin: 0;
-  background-color: rgba(133, 133, 133, 0.5);
-  color: white;
+  background-color: var(--periwinkle);
+  color: var(--beige);
   border-radius: 10px;
   box-sizing: border-box;
 }
@@ -33,7 +33,7 @@
 }
 
 .project__link {
-  background-color: orange;
+  background-color: var(--lobster-pink);
   color: white;
   padding: 10px 20px;
   border-radius: 10px;
@@ -41,5 +41,5 @@
 }
 
 .project__link:hover {
-  background-color: darkorange;
+  background-color: var(--slate-indigo);
 }
