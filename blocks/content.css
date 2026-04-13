@@ -8,7 +8,7 @@
   font-weight: 800;
   line-height: 23px;
   text-transform: uppercase;
-  color: #daae1f;
+  color: var(--lobster-pink);
   display: inline-block;
   text-align: inherit; /* respect parent text-align (e.g., center from .skills) */
 }

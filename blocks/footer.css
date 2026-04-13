@@ -1,12 +1,14 @@
 .footer {
   margin-top: auto;
   padding: 40px 40px;
+  color: #fff;
 }
 
 .footer__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--beige);
 }
 
 .footer__title {
@@ -14,13 +16,11 @@
   font-size: 20px;
   font-weight: 800;
   line-height: 23px;
-  color: #fff;
   text-decoration: none;
   padding-bottom: 20px;
 }
 
 .footer__contacts {
-  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,11 +54,17 @@
 
 .footer__contacts_link {
   font-size: 16px;
-  color: #fff;
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.footer__title,
+.footer__contacts_link,
+.footer__copyright,
+.footer__credit {
+  color: inherit;
 }
 
 .footer__contacts_link:hover {
@@ -68,12 +74,12 @@
 .footer__copyright {
   font-size: 16px;
   text-align: center;
-  color: #858585;
+  color: inherit;
   margin: 0;
   padding-top: 60px;
 }
 
 .footer__credit {
   text-decoration: underline;
-  color: #858585;
+  color: inherit;
 }

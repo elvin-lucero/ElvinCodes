@@ -7,14 +7,13 @@
   font-weight: 400;
   line-height: 12px;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--soft-fawn);
   padding: 40px 0;
 }
 
 .nav__logo {
   text-transform: none;
   text-decoration: none;
-  color: #fff;
   font-size: 20px;
   font-weight: 800;
   margin: 20px 0;
@@ -29,8 +28,12 @@
 }
 
 .nav__link {
-  color: #fff;
   text-decoration: none;
+}
+
+.nav__logo,
+.nav__link {
+  color: inherit;
 }
 
 .nav__link:hover {

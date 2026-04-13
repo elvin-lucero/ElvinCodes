@@ -1,6 +1,6 @@
 .page {
-  background-color: #222;
-  color: #aaa;
+  background-color: var(--gunmetal);
+  color: var(--beige);
   font-family: "Raleway", sans-serif;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
