@@ -1,8 +1,40 @@
 :root {
+  /* Brand palette */
   --gunmetal: #3f4045;
   --periwinkle: #a6b1e1;
   --beige: #f2f3d9;
   --lobster-pink: #cd5d67;
   --soft-fawn: #d4b483;
   --slate-indigo: #576bc7;
+
+  /* Surfaces (dark theme) */
+  --bg: #17181d;
+  --bg-elevated: #1f2027;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-hover: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  /* Text */
+  --text: #f2f3d9;
+  --text-muted: rgba(242, 243, 217, 0.68);
+  --text-faint: rgba(242, 243, 217, 0.5);
+
+  /* Accents */
+  --accent: #7c8cf0;
+  --accent-pink: var(--lobster-pink);
+  --gradient: linear-gradient(120deg, var(--slate-indigo), var(--periwinkle) 55%, var(--lobster-pink));
+
+  /* Effects */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.45);
+  --ring: 0 0 0 3px rgba(124, 140, 240, 0.45);
+
+  /* Layout */
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+  --maxw: 1120px;
+  --gutter: clamp(20px, 5vw, 48px);
 }

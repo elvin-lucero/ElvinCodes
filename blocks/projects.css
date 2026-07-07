@@ -1,28 +1,14 @@
 .projects {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-  align-items: center;
 }
 
 .projects__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 420px));
-  justify-content: center;
-  justify-items: center;
-  margin: 0 auto;
-  width: min(100%, 1200px);
-  padding: 0;
-  gap: 1rem;
-}
-
-.project {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: clamp(18px, 3vw, 28px);
   width: 100%;
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
+  list-style: none;
 }
