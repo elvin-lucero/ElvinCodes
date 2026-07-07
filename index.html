@@ -1,89 +1,175 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Welcome to my personal portfolio!" />
-    <meta name="keywords" content="HTML, CSS" />
-    <meta name="author" content="Elvin's Portfolio" />
-    <title>ElvinCodes</title>
+    <meta
+      name="description"
+      content="Elvin Lucero — full-stack software engineer based in NYC. Portfolio of web development projects built with HTML, CSS, and JavaScript."
+    />
+    <meta name="keywords" content="Elvin Lucero, software engineer, full-stack developer, NYC, portfolio, HTML, CSS, JavaScript" />
+    <meta name="author" content="Elvin Lucero" />
+    <meta name="theme-color" content="#1b1c22" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Elvin Lucero — Software Engineer" />
+    <meta property="og:description" content="Full-stack developer based in NYC building modern, responsive web applications." />
+    <meta property="og:type" content="website" />
+
+    <title>Elvin Lucero — Software Engineer</title>
+
+    <!-- Favicon (inline, self-contained) -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23576bc7'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='18' font-weight='700' fill='%23f2f3d9' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body>
-    <div class="page">
-      <header class="header page__section">
-        <nav class="nav">
-          <a href="#" class="nav__logo">Elvin__Codes</a>
+    <a href="#projects" class="skip-link">Skip to content</a>
+
+    <div class="page" id="top">
+      <!-- ===== Navigation ===== -->
+      <header class="site-header">
+        <nav class="nav page__section" aria-label="Primary">
+          <a href="#top" class="nav__logo">Elvin<span class="nav__logo-accent">__</span>Codes</a>
+
+          <input type="checkbox" id="nav-toggle" class="nav__toggle-checkbox" />
+          <label for="nav-toggle" class="nav__toggle" aria-label="Toggle navigation menu">
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
+          </label>
+
           <ul class="nav__links">
-            <li>
-              <a href="#skills" class="nav__link">Skills</a>
-            </li>
-            <li>
-              <a href="#projects" class="nav__link">Projects</a>
-            </li>
-            <li>
-              <a href="#contacts" class="nav__link">Contacts</a>
-            </li>
+            <li><a href="#skills" class="nav__link">Skills</a></li>
+            <li><a href="#projects" class="nav__link">Projects</a></li>
+            <li><a href="#contacts" class="nav__link">Contact</a></li>
             <li>
               <a
                 href="https://elvin-lucero.github.io/Elvins_Socials/"
-                class="nav__link"
+                class="nav__link nav__link_cta"
                 >My Links</a
               >
             </li>
           </ul>
         </nav>
-        <img
-          src="./images/elvins_picture.jpeg"
-          notes="Add image"
-          alt="Image of myself"
-          class="header__image"
-        />
-        <h1 class="header__title">
-          Hey, I'm Elvin.<br />
-          Software Engineer.
-        </h1>
-        <p class="header__description">
-          I'm a full-stack developer based in NYC with a passion for testing my
-          limits and creating new and innovative web applications.
-        </p>
       </header>
-      <main class="content page__section">
-        <section class="skills" id="skills">
-          <h2 class="skills__title content__title">Skills/Resume/CV</h2>
+
+      <!-- ===== Hero ===== -->
+      <section class="hero page__section" aria-labelledby="hero-title">
+        <span class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Available for new opportunities
+        </span>
+
+        <div class="hero__avatar-wrap">
+          <img
+            src="./images/elvins_picture.jpeg"
+            alt="Portrait of Elvin Lucero"
+            class="hero__avatar"
+            width="180"
+            height="180"
+          />
+        </div>
+
+        <h1 class="hero__title" id="hero-title">
+          Hey, I'm Elvin — <span class="hero__title-accent">Software Engineer</span>
+        </h1>
+        <p class="hero__description">
+          I'm a full-stack developer based in NYC with a passion for testing my
+          limits and building modern, responsive web applications.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn_primary">View my work</a>
+          <a href="#contacts" class="btn btn_ghost">Get in touch</a>
+        </div>
+      </section>
+
+      <main class="content">
+        <!-- ===== Skills ===== -->
+        <section class="skills page__section" id="skills" aria-labelledby="skills-title">
+          <div class="section-heading">
+            <span class="section-heading__eyebrow">01 — About</span>
+            <h2 class="section-heading__title content__title" id="skills-title">
+              Skills &amp; Toolbox
+            </h2>
+          </div>
           <p class="skills__description">
-            I have experience with HTML, CSS, JavaScript, and currently learning
-            more. I am passionate about learning new technologies and
-            continuously improving my skills as a developer.
+            I have hands-on experience with HTML, CSS, and JavaScript, and I'm
+            continually learning new technologies. I care about clean code,
+            accessible interfaces, and continuously improving as a developer.
           </p>
+          <ul class="skills__list" aria-label="Technologies I work with">
+            <li class="skill">HTML5</li>
+            <li class="skill">CSS3</li>
+            <li class="skill">JavaScript</li>
+            <li class="skill">Responsive Design</li>
+            <li class="skill">Git</li>
+            <li class="skill">GitHub</li>
+            <li class="skill">Accessibility</li>
+          </ul>
         </section>
-        <section class="projects" id="projects">
-          <h2 class="projects__title content__title">Projects</h2>
+
+        <!-- ===== Projects ===== -->
+        <section class="projects page__section" id="projects" aria-labelledby="projects-title">
+          <div class="section-heading">
+            <span class="section-heading__eyebrow">02 — Work</span>
+            <h2 class="section-heading__title content__title" id="projects-title">
+              Featured Projects
+            </h2>
+          </div>
+
           <ul class="projects__list">
             <li class="project">
-              <img
-                src="./images/project-image_raysol.png"
-                alt="Screenshot of Raysol Drugs website"
-                class="project__image"
-              />
+              <div class="project__media">
+                <img
+                  src="./images/project-image_raysol.png"
+                  alt="Screenshot of the Raysol Drugs pharmacy website"
+                  class="project__image"
+                  loading="lazy"
+                />
+              </div>
               <div class="project__content">
                 <h3 class="project__title">Raysol Drugs Inc.</h3>
                 <p class="project__description">
-                  Designed and built a fully functional website for an
-                  independent NYC pharmacy, featuring online appointment
-                  booking, service pages, SMS messaging integration, and
-                  insurance information. Currently live and serving patients.
+                  A fully functional website for an independent NYC pharmacy,
+                  featuring online appointment booking, service pages, SMS
+                  integration, and insurance info. Live and serving patients.
                 </p>
-                <a href="https://www.raysoldrugs.com/" class="project__link"
-                  >View Project</a
+                <ul class="project__tags">
+                  <li class="project__tag">Client work</li>
+                  <li class="project__tag">Live site</li>
+                </ul>
+                <a
+                  href="https://www.raysoldrugs.com/"
+                  class="project__link"
+                  target="_blank"
+                  rel="noopener"
+                  >View project <span aria-hidden="true">→</span></a
                 >
               </div>
             </li>
+
             <li class="project">
-              <img
-                src="./images/project-image_triple-peaks-library.png"
-                alt="Project Image"
-                class="project__image"
-              />
+              <div class="project__media">
+                <img
+                  src="./images/project-image_triple-peaks-library.png"
+                  alt="Screenshot of the Triple Peaks Library website"
+                  class="project__image"
+                  loading="lazy"
+                />
+              </div>
               <div class="project__content">
                 <h3 class="project__title">Triple Peaks Library</h3>
                 <p class="project__description">
@@ -91,75 +177,105 @@
                   featuring an events section, reader picks, membership steps,
                   and a multi-section layout with smooth navigation.
                 </p>
+                <ul class="project__tags">
+                  <li class="project__tag">HTML</li>
+                  <li class="project__tag">CSS</li>
+                </ul>
                 <a
                   href="https://elvin-lucero.github.io/Triple-Peaks-Library/"
                   class="project__link"
-                  >View Project</a
+                  target="_blank"
+                  rel="noopener"
+                  >View project <span aria-hidden="true">→</span></a
                 >
               </div>
             </li>
+
             <li class="project">
-              <img
-                src="./images/project-image_coffee-shop.png"
-                alt="Project Image"
-                class="project__image"
-              />
+              <div class="project__media">
+                <img
+                  src="./images/project-image_coffee-shop.png"
+                  alt="Screenshot of the Coffee Shop website"
+                  class="project__image"
+                  loading="lazy"
+                />
+              </div>
               <div class="project__content">
                 <h3 class="project__title">Coffee Shop</h3>
                 <p class="project__description">
-                  A responsive coffee shop website built with HTML and CSS,
-                  featuring an interactive table reservation form, a full menu,
-                  embedded recipe cards, and a multi-section layout with smooth
-                  anchor navigation.
+                  A responsive coffee shop website with an interactive table
+                  reservation form, a full menu, embedded recipe cards, and a
+                  multi-section layout with smooth anchor navigation.
                 </p>
+                <ul class="project__tags">
+                  <li class="project__tag">HTML</li>
+                  <li class="project__tag">CSS</li>
+                </ul>
                 <a
                   href="https://elvin-lucero.github.io/se_project_coffeeshop/"
                   class="project__link"
-                  >View Project</a
+                  target="_blank"
+                  rel="noopener"
+                  >View project <span aria-hidden="true">→</span></a
                 >
               </div>
             </li>
+
             <li class="project">
-              <img
-                src="./images/project-image_spots.png"
-                notes="Add image"
-                alt="Project Image"
-                class="project__image"
-              />
+              <div class="project__media">
+                <img
+                  src="./images/project-image_spots.png"
+                  alt="Screenshot of the Spots social media app"
+                  class="project__image"
+                  loading="lazy"
+                />
+              </div>
               <div class="project__content">
                 <h3 class="project__title">Spots</h3>
                 <p class="project__description">
                   A responsive social media app built with HTML, CSS, and
                   JavaScript, featuring dynamic post creation, profile editing,
-                  and interactive modal popups — mimicking core functionality of
-                  platforms like Instagram.
+                  and interactive modals — inspired by platforms like Instagram.
                 </p>
+                <ul class="project__tags">
+                  <li class="project__tag">HTML</li>
+                  <li class="project__tag">CSS</li>
+                  <li class="project__tag">JavaScript</li>
+                </ul>
                 <a
                   href="https://elvin-lucero.github.io/se_project_spots/"
                   class="project__link"
-                  >View Project</a
+                  target="_blank"
+                  rel="noopener"
+                  >View project <span aria-hidden="true">→</span></a
                 >
               </div>
             </li>
           </ul>
         </section>
       </main>
-      <footer class="footer page__section" id="footer">
+
+      <!-- ===== Footer ===== -->
+      <footer class="footer page__section" id="contacts">
         <div class="footer__content">
-          <a href="#" class="footer__title">Elvin__Codes</a>
+          <div class="footer__brand">
+            <a href="#top" class="footer__title">Elvin<span class="nav__logo-accent">__</span>Codes</a>
+            <p class="footer__tagline">
+              Full-stack developer building modern web experiences from NYC.
+            </p>
+          </div>
+
           <div class="footer__contacts">
-            <h3 class="footer__contacts_heading">Contact me</h3>
+            <h3 class="footer__contacts_heading">Let's connect</h3>
             <ul class="footer__contacts_links">
               <li>
                 <a
                   href="https://www.linkedin.com/in/elvin-lucero/"
                   class="footer__contacts_link"
+                  target="_blank"
+                  rel="noopener"
                 >
-                  <img
-                    src="./images/icons8-linkedin.svg"
-                    alt="LinkedIn Icon"
-                    class="footer__contacts_icon"
-                  />
+                  <img src="./images/icons8-linkedin.svg" alt="" class="footer__contacts_icon" />
                   LinkedIn
                 </a>
               </li>
@@ -167,25 +283,24 @@
                 <a
                   href="https://github.com/elvin-lucero"
                   class="footer__contacts_link"
+                  target="_blank"
+                  rel="noopener"
                 >
-                  <img
-                    src="./images/icons8-github.svg"
-                    alt="GitHub Icon"
-                    class="footer__contacts_icon"
-                  />
+                  <img src="./images/icons8-github.svg" alt="" class="footer__contacts_icon" />
                   GitHub
                 </a>
               </li>
             </ul>
           </div>
         </div>
+
         <p class="footer__copyright">
           &copy; 2026 Elvin Lucero. Icons by
-          <a class="footer__credit" target="_blank" href="https://icons8.com"
-            >Icons8
-          </a>
+          <a class="footer__credit" target="_blank" rel="noopener" href="https://icons8.com">Icons8</a>.
         </p>
       </footer>
     </div>
+
+    <script src="./scripts/main.js" defer></script>
   </body>
 </html>

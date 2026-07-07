@@ -1,45 +1,102 @@
 .project {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
-  max-width: 420px;
-  padding: 20px;
   margin: 0;
-  background-color: var(--periwinkle);
-  color: var(--beige);
-  border-radius: 10px;
-  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lg);
+}
+
+.project__media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #0f1014;
+  border-bottom: 1px solid var(--border);
 }
 
 .project__image {
   display: block;
   width: 100%;
-  max-width: 400px;
-  height: auto;
-  object-fit: contain;
-  margin: 0;
-  padding: 0;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+
+.project:hover .project__image {
+  transform: scale(1.05);
 }
 
 .project__content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 24px;
+  flex-grow: 1;
+}
+
+.project__title {
+  font-family: "Space Grotesk", "Raleway", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   margin: 0;
-  width: 100%;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: var(--text);
+}
+
+.project__description {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project__tag {
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  background: rgba(166, 177, 225, 0.12);
+  border: 1px solid rgba(166, 177, 225, 0.22);
+  color: var(--periwinkle);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .project__link {
-  background-color: var(--lobster-pink);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 8px;
+  color: var(--periwinkle);
+  font-weight: 600;
+  font-size: 15px;
   text-decoration: none;
+  transition: gap 0.2s ease, color 0.2s ease;
 }
 
 .project__link:hover {
-  background-color: var(--slate-indigo);
+  color: var(--lobster-pink);
+  gap: 12px;
 }

@@ -1,4 +1,6 @@
-@font-face {
-  font-family: "Raleway";
-  src: url("https://practicum-content.s3.us-west-1.amazonaws.com/fonts/Raleway-ExtraBold.ttf");
-}
+/*
+ * Fonts are loaded via Google Fonts in index.html:
+ *   - Raleway (400/500/600/700)     → body text
+ *   - Space Grotesk (500/600/700)   → display headings
+ * This file is kept as the import target for the block architecture.
+ */
