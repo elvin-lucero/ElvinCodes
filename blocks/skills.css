@@ -17,7 +17,9 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-  margin: 32px 0 0;
+  /* Cap the width so the pills settle into two balanced, centered rows */
+  max-width: 600px;
+  margin: 32px auto 0;
   padding: 0;
   list-style: none;
 }
