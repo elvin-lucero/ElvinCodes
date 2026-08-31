@@ -87,13 +87,40 @@
   opacity: 0.85;
 }
 
-.footer__copyright {
+.footer__bottom {
   margin: 40px 0 0;
   padding-top: 24px;
   border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 18px;
   font-size: 14px;
-  text-align: center;
   color: var(--text-faint);
+}
+
+.footer__copyright {
+  margin: 0;
+}
+
+.footer__legal {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__legal-link {
+  color: var(--text-faint);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__legal-link:hover {
+  color: var(--periwinkle);
 }
 
 .footer__credit {

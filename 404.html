@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Page not found — ElvinCodes." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#1b1c22" />
+    <title>404 — Page not found | ElvinCodes</title>
+
+    <link rel="icon" href="/images/favicon.png" />
+
+    <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with your Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX", { anonymize_ip: true });
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Absolute paths: 404.html is served for any unknown URL depth -->
+    <link rel="stylesheet" href="/pages/legal.css" />
+  </head>
+  <body>
+    <a href="#content" class="skip-link">Skip to content</a>
+
+    <div class="page" id="top">
+      <!-- ===== Navigation ===== -->
+      <header class="site-header">
+        <nav class="nav page__section" aria-label="Primary">
+          <a href="/" class="nav__logo"
+            >Elvin<span class="nav__logo-accent">Codes</span
+            ><span class="nav__logo-caret" aria-hidden="true"></span
+          ></a>
+
+          <input type="checkbox" id="nav-toggle" class="nav__toggle-checkbox" />
+          <label
+            for="nav-toggle"
+            class="nav__toggle"
+            aria-label="Toggle navigation menu"
+          >
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
+          </label>
+
+          <ul class="nav__links">
+            <li><a href="/#skills" class="nav__link">Skills</a></li>
+            <li><a href="/#projects" class="nav__link">Projects</a></li>
+            <li><a href="/#contacts" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- ===== 404 ===== -->
+      <main class="notfound" id="content">
+        <p class="notfound__code">404</p>
+
+        <div class="notfound__terminal" aria-hidden="true">
+          <span class="notfound__prompt">elvin@codes</span>:~$ open
+          ./the-page-you-wanted<br />
+          <span class="notfound__error"
+            >error: 404 — no such file or directory</span
+          ><span class="nav__logo-caret"></span>
+        </div>
+
+        <h1 class="notfound__title">This page went off-script.</h1>
+        <p class="notfound__text">
+          The page you're looking for doesn't exist or has moved. Let's get you
+          back on track.
+        </p>
+
+        <div class="notfound__actions">
+          <a href="/" class="btn btn_primary">Back to home</a>
+          <a href="/#projects" class="btn btn_ghost">View projects</a>
+        </div>
+      </main>
+
+      <!-- ===== Footer ===== -->
+      <footer class="footer page__section">
+        <div class="footer__content">
+          <div class="footer__brand">
+            <a href="/" class="footer__title"
+              >Elvin<span class="nav__logo-accent">Codes</span
+              ><span class="nav__logo-caret" aria-hidden="true"></span
+            ></a>
+            <p class="footer__tagline">
+              Full-stack developer building modern web experiences from NYC.
+            </p>
+          </div>
+
+          <div class="footer__contacts">
+            <h3 class="footer__contacts_heading">Let's connect</h3>
+            <ul class="footer__contacts_links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/elvin-lucero/"
+                  class="footer__contacts_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="/images/linkedin.svg"
+                    alt=""
+                    class="footer__contacts_icon"
+                  />
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/elvin-lucero"
+                  class="footer__contacts_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="/images/github.svg"
+                    alt=""
+                    class="footer__contacts_icon"
+                  />
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">&copy; 2026 Elvin Lucero.</p>
+          <ul class="footer__legal">
+            <li><a class="footer__legal-link" href="/privacy.html">Privacy</a></li>
+            <li><a class="footer__legal-link" href="/terms.html">Terms</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/scripts/main.js" defer></script>
+  </body>
+</html>

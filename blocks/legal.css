@@ -1,0 +1,177 @@
+/* Legal + utility pages (privacy, terms, 404) */
+
+.legal {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  padding-top: clamp(96px, 13vw, 140px); /* clear the sticky header */
+  padding-bottom: clamp(56px, 10vw, 110px);
+}
+
+.legal__eyebrow {
+  display: inline-block;
+  font-family: "Space Grotesk", "Raleway", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--periwinkle);
+  margin: 0 0 12px;
+}
+
+.legal__title {
+  font-family: "Space Grotesk", "Raleway", sans-serif;
+  font-size: clamp(30px, 5vw, 46px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--text);
+}
+
+.legal__updated {
+  margin: 14px 0 0;
+  color: var(--text-faint);
+  font-size: 14px;
+}
+
+.legal__body {
+  margin-top: clamp(28px, 5vw, 44px);
+  color: var(--text-muted);
+  font-size: clamp(15px, 1.6vw, 17px);
+  line-height: 1.75;
+}
+
+.legal__body h2 {
+  font-family: "Space Grotesk", "Raleway", sans-serif;
+  font-size: clamp(19px, 2.4vw, 23px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin: 40px 0 12px;
+}
+
+.legal__body p {
+  margin: 0 0 18px;
+}
+
+.legal__body ul {
+  margin: 0 0 18px;
+  padding-left: 22px;
+}
+
+.legal__body li {
+  margin: 0 0 10px;
+}
+
+.legal__body a {
+  color: var(--periwinkle);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+.legal__body a:hover {
+  color: var(--text);
+}
+
+.legal__body strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.legal__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+  color: var(--periwinkle);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.legal__back:hover {
+  color: var(--text);
+}
+
+/* ===== 404 ===== */
+.notfound {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 18px;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  padding-top: clamp(110px, 16vw, 170px);
+  padding-bottom: clamp(70px, 12vw, 120px);
+}
+
+.notfound__code {
+  font-family: "Space Grotesk", "Raleway", sans-serif;
+  font-size: clamp(88px, 20vw, 180px);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  margin: 0;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.notfound__terminal {
+  width: 100%;
+  max-width: 520px;
+  text-align: left;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  box-shadow: var(--shadow-md);
+  overflow-x: auto;
+}
+
+.notfound__prompt {
+  color: var(--periwinkle);
+}
+
+.notfound__cmd {
+  color: var(--text);
+}
+
+.notfound__error {
+  color: var(--lobster-pink);
+}
+
+.notfound__title {
+  font-family: "Space Grotesk", "Raleway", sans-serif;
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 8px 0 0;
+  color: var(--text);
+}
+
+.notfound__text {
+  margin: 0;
+  max-width: 46ch;
+  color: var(--text-muted);
+}
+
+.notfound__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 12px;
+}
