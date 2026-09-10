@@ -18,7 +18,7 @@
   justify-content: center;
   gap: 12px;
   /* Cap the width so the pills settle into two balanced, centered rows */
-  max-width: 600px;
+  max-width: 720px;
   margin: 32px auto 0;
   padding: 0;
   list-style: none;
