@@ -7,22 +7,77 @@
       name="description"
       content="Elvin Lucero — full-stack software engineer based in NYC. Portfolio of web development projects built with HTML, CSS, and JavaScript."
     />
-    <meta
-      name="keywords"
-      content="Elvin Lucero, software engineer, full-stack developer, NYC, portfolio, HTML, CSS, JavaScript"
-    />
     <meta name="author" content="Elvin Lucero" />
     <meta name="theme-color" content="#1b1c22" />
+    <link rel="canonical" href="https://elvincodes.com/" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Elvin Lucero — Software Engineer" />
+    <meta property="og:site_name" content="ElvinCodes" />
+    <meta property="og:title" content="ElvinCodes — Software Engineer" />
     <meta
       property="og:description"
       content="Full-stack developer based in NYC building modern, responsive web applications."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elvincodes.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:image"
+      content="https://elvincodes.com/images/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Elvin Lucero — Software Engineer, full-stack developer in New York City"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ElvinCodes — Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Full-stack developer based in NYC building modern, responsive web applications."
+    />
+    <meta
+      name="twitter:image"
+      content="https://elvincodes.com/images/og-image.png"
+    />
 
     <title>ElvinCodes — Software Engineer</title>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Elvin Lucero",
+        "url": "https://elvincodes.com/",
+        "image": "https://elvincodes.com/images/og-image.png",
+        "jobTitle": "Software Engineer",
+        "description": "Full-stack developer based in NYC building modern, responsive web applications.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "New York",
+          "addressRegion": "NY",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://github.com/elvin-lucero",
+          "https://www.linkedin.com/in/elvin-lucero/"
+        ],
+        "knowsAbout": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Responsive Design",
+          "Accessibility",
+          "Supabase",
+          "Vercel",
+          "Linux"
+        ]
+      }
+    </script>
 
     <!-- Favicon (inline, self-contained) -->
     <link
@@ -167,7 +222,7 @@
               <div class="project__media">
                 <img
                   src="./images/project-image_raysol.png"
-                  alt="Screenshot of the Raysol Drugs pharmacy website"
+                  alt="Screenshot of the Raysol Drugs bilingual pharmacy website homepage"
                   class="project__image"
                   loading="lazy"
                 />
@@ -175,13 +230,17 @@
               <div class="project__content">
                 <h3 class="project__title">Raysol Drugs Inc.</h3>
                 <p class="project__description">
-                  A fully functional website for an independent NYC pharmacy,
-                  featuring online appointment booking, service pages, SMS
-                  integration, and insurance info. Live and serving patients.
+                  A custom-coded website for an independent NYC pharmacy —
+                  fully bilingual (English/Spanish), covering prescription
+                  refills, home medical equipment, and walk-in vaccines. Rebuilt
+                  from scratch and live, serving patients daily.
                 </p>
                 <ul class="project__tags">
                   <li class="project__tag">Client work</li>
                   <li class="project__tag">Live site</li>
+                  <li class="project__tag">HTML</li>
+                  <li class="project__tag">CSS</li>
+                  <li class="project__tag">JavaScript</li>
                 </ul>
                 <a
                   href="https://www.raysoldrugs.com/"
