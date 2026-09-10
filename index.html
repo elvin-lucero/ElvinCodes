@@ -74,7 +74,10 @@
           "Accessibility",
           "Supabase",
           "Vercel",
-          "Linux"
+          "Linux",
+          "Cloudflare",
+          "Resend",
+          "Netlify"
         ]
       }
     </script>
@@ -198,6 +201,9 @@
             <li class="skill">Supabase</li>
             <li class="skill">Vercel</li>
             <li class="skill">Linux</li>
+            <li class="skill">Cloudflare</li>
+            <li class="skill">Resend</li>
+            <li class="skill">Netlify</li>
           </ul>
         </section>
 
@@ -217,41 +223,52 @@
             </h2>
           </div>
 
-          <ul class="projects__list">
-            <li class="project">
-              <div class="project__media">
-                <img
-                  src="./images/project-image_raysol.png"
-                  alt="Screenshot of the Raysol Drugs bilingual pharmacy website homepage"
-                  class="project__image"
-                  loading="lazy"
-                />
-              </div>
-              <div class="project__content">
-                <h3 class="project__title">Raysol Drugs Inc.</h3>
-                <p class="project__description">
-                  A custom-coded website for an independent NYC pharmacy —
-                  fully bilingual (English/Spanish), covering prescription
-                  refills, home medical equipment, and walk-in vaccines. Rebuilt
-                  from scratch and live, serving patients daily.
-                </p>
-                <ul class="project__tags">
-                  <li class="project__tag">Client work</li>
-                  <li class="project__tag">Live site</li>
-                  <li class="project__tag">HTML</li>
-                  <li class="project__tag">CSS</li>
-                  <li class="project__tag">JavaScript</li>
-                </ul>
-                <a
-                  href="https://www.raysoldrugs.com/"
-                  class="project__link"
-                  target="_blank"
-                  rel="noopener"
-                  >View project <span aria-hidden="true">→</span></a
-                >
-              </div>
-            </li>
+          <div class="projects__group">
+            <h3 class="projects__group-title">Client work</h3>
+            <ul class="projects__list projects__list_featured">
+              <li class="project project_featured">
+                <div class="project__media">
+                  <img
+                    src="./images/project-image_raysol.png"
+                    alt="Screenshot of the Raysol Drugs bilingual pharmacy website homepage"
+                    class="project__image"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project__content">
+                  <div class="project__heading">
+                    <h4 class="project__title">Raysol Drugs Inc.</h4>
+                    <span class="project__live">
+                      <span class="project__live-dot" aria-hidden="true"></span>
+                      Live
+                    </span>
+                  </div>
+                  <p class="project__description">
+                    A custom-coded website for an independent NYC pharmacy —
+                    fully bilingual (English/Spanish), covering prescription
+                    refills, home medical equipment, and walk-in vaccines.
+                    Rebuilt from scratch and live, serving patients daily.
+                  </p>
+                  <ul class="project__tags">
+                    <li class="project__tag">HTML</li>
+                    <li class="project__tag">CSS</li>
+                    <li class="project__tag">JavaScript</li>
+                  </ul>
+                  <a
+                    href="https://www.raysoldrugs.com/"
+                    class="project__link"
+                    target="_blank"
+                    rel="noopener"
+                    >View project <span aria-hidden="true">→</span></a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
 
+          <div class="projects__group">
+            <h3 class="projects__group-title">Bootcamp projects</h3>
+            <ul class="projects__list">
             <li class="project">
               <div class="project__media">
                 <img
@@ -262,7 +279,7 @@
                 />
               </div>
               <div class="project__content">
-                <h3 class="project__title">Triple Peaks Library</h3>
+                <h4 class="project__title">Triple Peaks Library</h4>
                 <p class="project__description">
                   A fully responsive library website built with HTML and CSS,
                   featuring an events section, reader picks, membership steps,
@@ -292,7 +309,7 @@
                 />
               </div>
               <div class="project__content">
-                <h3 class="project__title">Coffee Shop</h3>
+                <h4 class="project__title">Coffee Shop</h4>
                 <p class="project__description">
                   A responsive coffee shop website with an interactive table
                   reservation form, a full menu, embedded recipe cards, and a
@@ -322,7 +339,7 @@
                 />
               </div>
               <div class="project__content">
-                <h3 class="project__title">Spots</h3>
+                <h4 class="project__title">Spots</h4>
                 <p class="project__description">
                   A responsive social media app built with HTML, CSS, and
                   JavaScript, featuring dynamic post creation, profile editing,
@@ -342,7 +359,8 @@
                 >
               </div>
             </li>
-          </ul>
+            </ul>
+          </div>
         </section>
       </main>
 

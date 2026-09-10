@@ -12,3 +12,57 @@
   padding: 0;
   list-style: none;
 }
+
+/* ===== Project groups (client work vs. bootcamp) ===== */
+.projects__group + .projects__group {
+  margin-top: clamp(40px, 6vw, 64px);
+}
+
+.projects__group-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 20px;
+  font-family: "Space Grotesk", "Raleway", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.projects__group-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Client work gets a single, wider showcase card.
+   Compound selector so it wins over .project's column layout
+   regardless of stylesheet order. */
+.projects__list_featured {
+  grid-template-columns: 1fr;
+}
+
+.project.project_featured .project__link {
+  margin-top: 12px;
+}
+
+@media (min-width: 860px) {
+  .project.project_featured {
+    flex-direction: row;
+  }
+
+  .project.project_featured .project__media {
+    flex: 0 0 54%;
+    aspect-ratio: auto;
+    border-bottom: none;
+    border-right: 1px solid var(--border);
+  }
+
+  .project.project_featured .project__content {
+    padding: 32px;
+    justify-content: center;
+  }
+}
