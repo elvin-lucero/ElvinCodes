@@ -1,12 +1,12 @@
-# Elvin Lucero | Front-End Developer
+# Elvin Lucero | Software Engineer
 
 Personal portfolio site showcasing my web development projects.
 
-🌐 Live Site: https://elvin-lucero.github.io/ElvinCodes/
+🌐 Live site: https://elvincodes.com
 
 ## Projects
 
-- **Raysol Drugs** - Client website for an NYC pharmacy
+- **Raysol Drugs** - Client website for an NYC pharmacy ([case study](https://elvincodes.com/case-study-raysol.html))
 - **Spots** - Social media app built with HTML, CSS, and JavaScript
 - **Coffee Shop** - Responsive website with reservation form
 - **Triple Peaks Library** - Multi-section library website
@@ -14,6 +14,11 @@ Personal portfolio site showcasing my web development projects.
 ## Technologies
 
 HTML | CSS | JavaScript | Git | GitHub
+
+## Hosting
+
+Deployed on **Netlify** from `main`, with no build step — `netlify.toml` publishes
+the repository root as-is. The contact form uses Netlify Forms.
 
 ## Connect
 
