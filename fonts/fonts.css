@@ -1,7 +1,7 @@
 /*
  * Fonts are loaded via Google Fonts in the page <head>:
  *   - Raleway (400/500/600/700)      → body text
- *   - Inter Tight (500/600/700)      → display headings
+ *   - Inter (500/600/700)            → display headings
  *
  * Nothing here references a family name directly. Headings use
  * var(--font-display) and body copy var(--font-body), both defined in
