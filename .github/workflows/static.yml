@@ -1,12 +1,11 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
+# Hosting moved to Netlify. Automatic deploys on push are disabled so that
+# Pages does not publish the Netlify-only contact form, which would silently
+# drop submissions. Kept as a manual fallback while DNS is in transition —
+# run it from the Actions tab if Netlify ever needs to be backed out of.
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
