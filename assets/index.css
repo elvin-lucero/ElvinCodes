@@ -1247,7 +1247,9 @@ a {
 /* ===== Service cards ===== */
 .services__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* Two columns rather than auto-fit: four cards across a 1120px row leaves
+     a single orphan on the second line. */
+  grid-template-columns: 1fr;
   gap: 20px;
   width: 100%;
   margin: clamp(32px, 5vw, 44px) 0 0;
@@ -1288,6 +1290,12 @@ a {
   color: var(--text-muted);
   font-size: 15px;
   line-height: 1.65;
+}
+
+@media (min-width: 700px) {
+  .services__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ===== Process ===== */
