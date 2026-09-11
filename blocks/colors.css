@@ -32,7 +32,7 @@
   --ring: 0 0 0 3px rgba(124, 140, 240, 0.45);
 
   /* Typography */
-  --font-display: "Inter Tight", "Raleway", system-ui, sans-serif;
+  --font-display: "Inter", "Raleway", system-ui, sans-serif;
   --font-body: "Raleway", system-ui, -apple-system, sans-serif;
 
   /* Layout */
