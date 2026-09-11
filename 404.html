@@ -30,7 +30,26 @@
     />
 
     <!-- Absolute paths: 404.html is served for any unknown URL depth -->
-    <link rel="stylesheet" href="/pages/legal.css" />
+    <!-- Paints the page ground on the first frame, before stylesheets load -->
+    <style>
+      html {
+        background-color: #17181d;
+      }
+      body {
+        margin: 0;
+        background-color: #17181d;
+        color: #f2f3d9;
+      }
+    </style>
+
+    <link rel="stylesheet" href="/vendor/normalize.css" />
+    <link rel="stylesheet" href="/blocks/colors.css" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="stylesheet" href="/blocks/page.css" />
+    <link rel="stylesheet" href="/blocks/nav.css" />
+    <link rel="stylesheet" href="/blocks/button.css" />
+    <link rel="stylesheet" href="/blocks/footer.css" />
+    <link rel="stylesheet" href="/blocks/legal.css" />
   </head>
   <body>
     <a href="#content" class="skip-link">Skip to content</a>
@@ -112,6 +131,8 @@
                 >
                   <img
                     src="/images/linkedin.svg"
+                    width="20"
+                    height="20"
                     alt=""
                     class="footer__contacts_icon"
                   />
@@ -127,6 +148,8 @@
                 >
                   <img
                     src="/images/github.svg"
+                    width="20"
+                    height="20"
                     alt=""
                     class="footer__contacts_icon"
                   />

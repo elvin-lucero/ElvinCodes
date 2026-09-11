@@ -11,6 +11,10 @@ html {
 
 body {
   margin: 0;
+  /* The dark ground belongs on the canvas, not only on .page — otherwise the
+     browser paints white behind the document and on overscroll. */
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 .page {

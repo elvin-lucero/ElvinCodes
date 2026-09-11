@@ -107,7 +107,33 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./pages/index.css" />
+    <!-- Paints the page ground on the first frame, before stylesheets load -->
+    <style>
+      html {
+        background-color: #17181d;
+      }
+      body {
+        margin: 0;
+        background-color: #17181d;
+        color: #f2f3d9;
+      }
+    </style>
+
+    <link rel="stylesheet" href="./vendor/normalize.css" />
+    <link rel="stylesheet" href="./blocks/colors.css" />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./blocks/page.css" />
+    <link rel="stylesheet" href="./blocks/nav.css" />
+    <link rel="stylesheet" href="./blocks/header.css" />
+    <link rel="stylesheet" href="./blocks/section-heading.css" />
+    <link rel="stylesheet" href="./blocks/button.css" />
+    <link rel="stylesheet" href="./blocks/content.css" />
+    <link rel="stylesheet" href="./blocks/about.css" />
+    <link rel="stylesheet" href="./blocks/skills.css" />
+    <link rel="stylesheet" href="./blocks/projects.css" />
+    <link rel="stylesheet" href="./blocks/project.css" />
+    <link rel="stylesheet" href="./blocks/contact.css" />
+    <link rel="stylesheet" href="./blocks/footer.css" />
   </head>
   <body>
     <a href="#projects" class="skip-link">Skip to content</a>
@@ -263,6 +289,8 @@
                 <div class="project__media">
                   <img
                     src="./images/project-image_raysol.png"
+                    width="1920"
+                    height="1080"
                     alt="Screenshot of the Raysol Drugs bilingual pharmacy website homepage"
                     class="project__image"
                     loading="lazy"
@@ -304,6 +332,8 @@
               <div class="project__media">
                 <img
                   src="./images/project-image_triple-peaks-library.png"
+                  width="1597"
+                  height="1015"
                   alt="Screenshot of the Triple Peaks Library website"
                   class="project__image"
                   loading="lazy"
@@ -334,6 +364,8 @@
               <div class="project__media">
                 <img
                   src="./images/project-image_coffee-shop.png"
+                  width="1596"
+                  height="1348"
                   alt="Screenshot of the Coffee Shop website"
                   class="project__image"
                   loading="lazy"
@@ -364,6 +396,8 @@
               <div class="project__media">
                 <img
                   src="./images/project-image_spots.png"
+                  width="1606"
+                  height="1349"
                   alt="Screenshot of the Spots social media app"
                   class="project__image"
                   loading="lazy"
@@ -495,6 +529,8 @@
                 >
                   <img
                     src="./images/linkedin.svg"
+                    width="20"
+                    height="20"
                     alt=""
                     class="footer__contacts_icon"
                   />
@@ -510,6 +546,8 @@
                 >
                   <img
                     src="./images/github.svg"
+                    width="20"
+                    height="20"
                     alt=""
                     class="footer__contacts_icon"
                   />
