@@ -19,7 +19,8 @@
  * milliseconds whether or not stylesheets have arrived, so *any* external
  * stylesheet — however fast, however well cached — can produce a visibly
  * unstyled frame. Inlining removes the request, so there is nothing to wait
- * for and nothing to flash.
+ * for and nothing to flash. Fonts are self-hosted and preloaded, so a
+ * deployed page has no render-blocking request left at all.
  *
  * The committed HTML keeps the <link>, so the repo stays readable and the
  * pages still work opened straight from disk. Only the deployed copy is
@@ -71,11 +72,7 @@ function build(manifestPath) {
   return { name, blocks: files.length, bytes: out.length };
 }
 
-/*
- * Embed the bundle into the pages that link it, and stop the Google Fonts
- * stylesheet from blocking the first paint. Both are render-blocking network
- * requests, and Firefox paints before either can arrive.
- */
+/* Embed the bundle into the pages that link it. */
 function inlineInto(html) {
   const file = path.join(ROOT, html);
   let src = fs.readFileSync(file, "utf8");
@@ -93,14 +90,6 @@ function inlineInto(html) {
     `${indent}<style>\n${css.trimEnd()}\n${indent}</style>\n`
   );
 
-  // Load the web fonts without blocking rendering. font-display: swap is
-  // already set, so text paints in the fallback face and swaps when ready.
-  src = src.replace(
-    /( *)<link\s*\n\s*href="(https:\/\/fonts\.googleapis\.com\/[^"]+)"\s*\n\s*rel="stylesheet"\s*\n\s*\/>/,
-    (_m, ind, href) =>
-      `${ind}<link rel="preload" as="style" href="${href}" onload="this.onload=null;this.rel='stylesheet'" />\n` +
-      `${ind}<noscript><link rel="stylesheet" href="${href}" /></noscript>`
-  );
 
   fs.writeFileSync(file, src);
   return { html, bundle, bytes: css.length };

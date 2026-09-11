@@ -99,12 +99,20 @@
       gtag("config", "G-6VXHTYQCCM", { anonymize_ip: true });
     </script>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fonts (self-hosted; preloaded so they are ready before first paint) -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Inter:wght@500;600;700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="/fonts/files/inter-latin-v20.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/files/raleway-latin-v37.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
 
     <!-- Paints the page ground on the first frame, before stylesheets load -->

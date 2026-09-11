@@ -1,8 +1,9 @@
 [build]
-  # Concatenates the block stylesheets, then embeds them into each page and
-  # makes the web font request non-blocking. Firefox paints before external
-  # stylesheets arrive, so anything left as a request can flash unstyled.
-  # The committed HTML keeps its <link>; only the deployed copy is rewritten.
+  # Concatenates the block stylesheets and embeds them into each page, so a
+  # deployed page has no render-blocking stylesheet request. Firefox paints
+  # before external stylesheets arrive, so anything left as a request can
+  # flash unstyled. The committed HTML keeps its <link>; only the deployed
+  # copy is rewritten.
   command = "npm run build"
   publish = "."
 
@@ -13,3 +14,11 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  # Font filenames carry the upstream version, so the contents never change
+  # under a given name. Caching them hard means a repeat visit uses the font
+  # straight from cache with no request, and text never reflows.
+  for = "/fonts/files/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
