@@ -1,6 +1,10 @@
 /*
- * Fonts are loaded via Google Fonts in index.html:
- *   - Raleway (400/500/600/700)     → body text
- *   - Space Grotesk (500/600/700)   → display headings
- * This file is kept as the import target for the block architecture.
+ * Fonts are loaded via Google Fonts in the page <head>:
+ *   - Raleway (400/500/600/700)      → body text
+ *   - Inter Tight (500/600/700)      → display headings
+ *
+ * Nothing here references a family name directly. Headings use
+ * var(--font-display) and body copy var(--font-body), both defined in
+ * blocks/colors.css — change the family there and in the <link> tags,
+ * and the whole site follows.
  */

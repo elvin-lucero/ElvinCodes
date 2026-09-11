@@ -24,7 +24,7 @@
 }
 
 .nav__logo {
-  font-family: "Space Grotesk", "Raleway", sans-serif;
+  font-family: var(--font-display);
   text-decoration: none;
   font-size: 20px;
   font-weight: 700;
