@@ -149,3 +149,16 @@
     transform: none;
   }
 }
+
+/* ===== Standalone services page ===== */
+.services-page {
+  padding-top: clamp(96px, 13vw, 140px);
+}
+
+.services-page__cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: clamp(8px, 2vw, 16px);
+}
