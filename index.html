@@ -470,6 +470,18 @@
                   required
                 />
               </div>
+              <div class="contact__field">
+                <label class="contact__label" for="contact-phone"
+                  >Phone <span class="contact__optional">(optional)</span></label
+                >
+                <input
+                  class="contact__input"
+                  type="tel"
+                  id="contact-phone"
+                  name="phone"
+                  autocomplete="tel"
+                />
+              </div>
             </div>
 
             <div class="contact__field">
@@ -486,6 +498,11 @@
             <button class="btn btn_primary contact__submit" type="submit">
               Send message
             </button>
+
+            <p class="contact__alt">
+              Prefer email?
+              <a href="mailto:hello@elvincodes.com">hello@elvincodes.com</a>
+            </p>
           </form>
         </section>
       </main>
@@ -506,6 +523,21 @@
           <div class="footer__contacts">
             <h3 class="footer__contacts_heading">Let's connect</h3>
             <ul class="footer__contacts_links">
+              <li>
+                <a
+                  href="mailto:hello@elvincodes.com"
+                  class="footer__contacts_link"
+                >
+                  <img
+                    src="./images/email.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                    class="footer__contacts_icon"
+                  />
+                  Email
+                </a>
+              </li>
               <li>
                 <a
                   href="https://www.linkedin.com/in/elvin-lucero/"

@@ -1350,6 +1350,22 @@ a {
   }
 }
 
+.contact__optional {
+  color: var(--text-faint);
+  font-weight: 400;
+}
+
+/* Direct address for anyone who would rather not fill in a form */
+.contact__alt {
+  margin: 16px 0 0;
+  font-size: 14px;
+  color: var(--text-faint);
+}
+
+.contact__alt a {
+  color: var(--periwinkle);
+}
+
 /* ===== blocks/footer.css ===== */
 .footer {
   margin-top: auto;
