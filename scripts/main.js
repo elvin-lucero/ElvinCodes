@@ -63,7 +63,7 @@
   });
 
   // ===== Phone field =====
-  // Strips anything that is not a digit and reformats as (212)348-2117 while
+  // Strips anything that is not a digit and reformats as (212)555-0123 while
   // typing, so nobody has to work out the format themselves. The pattern
   // attribute is the actual gate, and it still holds without JavaScript.
   const phone = document.getElementById("contact-phone");
@@ -96,7 +96,7 @@
     // The browser's default pattern message says nothing useful
     phone.addEventListener("invalid", function () {
       phone.setCustomValidity(
-        "Please enter a 10-digit phone number, for example (212)348-2117."
+        "Please enter a 10-digit phone number, for example (212)555-0123."
       );
     });
   }
