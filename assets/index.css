@@ -475,6 +475,21 @@ body {
   padding-right: var(--gutter);
 }
 
+/* Shared by the hero availability dot, the project "live" badge and the case
+   study status. Defined here because page.css is in every bundle; the blocks
+   that use it are not. */
+@keyframes live-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(110, 231, 168, 0.5);
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 0 5px rgba(110, 231, 168, 0);
+  }
+}
+
 img {
   max-width: 100%;
   /* Images carry width/height attributes so the browser can reserve their space
@@ -757,7 +772,16 @@ a {
   height: 8px;
   border-radius: 50%;
   background: #6ee7a8;
-  box-shadow: 0 0 0 4px rgba(110, 231, 168, 0.18);
+  /* Same pulse as the "live" badge on project cards */
+  animation: live-pulse 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__badge-dot {
+    animation: none;
+    opacity: 1;
+    box-shadow: 0 0 0 4px rgba(110, 231, 168, 0.18);
+  }
 }
 
 .hero__avatar-wrap {
@@ -1213,17 +1237,6 @@ a {
   animation: live-pulse 1.8s ease-in-out infinite;
 }
 
-@keyframes live-pulse {
-  0%,
-  100% {
-    opacity: 1;
-    box-shadow: 0 0 0 0 rgba(110, 231, 168, 0.5);
-  }
-  50% {
-    opacity: 0.6;
-    box-shadow: 0 0 0 5px rgba(110, 231, 168, 0);
-  }
-}
 
 @media (prefers-reduced-motion: reduce) {
   .project__live-dot {

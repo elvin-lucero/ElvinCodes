@@ -27,7 +27,16 @@
   height: 8px;
   border-radius: 50%;
   background: #6ee7a8;
-  box-shadow: 0 0 0 4px rgba(110, 231, 168, 0.18);
+  /* Same pulse as the "live" badge on project cards */
+  animation: live-pulse 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__badge-dot {
+    animation: none;
+    opacity: 1;
+    box-shadow: 0 0 0 4px rgba(110, 231, 168, 0.18);
+  }
 }
 
 .hero__avatar-wrap {
