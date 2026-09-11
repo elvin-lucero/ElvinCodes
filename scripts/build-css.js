@@ -13,7 +13,20 @@
  * and the page paints unstyled until the last one lands. One file is one
  * request, and nothing renders before it.
  *
- * Run with: npm run build:css   (Netlify runs it automatically on deploy)
+ * With --inline (what Netlify runs on deploy) it goes one step further and
+ * embeds each bundle directly into the pages that use it, then drops the
+ * stylesheet link. Firefox performs its initial paint after a few
+ * milliseconds whether or not stylesheets have arrived, so *any* external
+ * stylesheet — however fast, however well cached — can produce a visibly
+ * unstyled frame. Inlining removes the request, so there is nothing to wait
+ * for and nothing to flash.
+ *
+ * The committed HTML keeps the <link>, so the repo stays readable and the
+ * pages still work opened straight from disk. Only the deployed copy is
+ * rewritten.
+ *
+ * Run with: npm run build:css           (write assets/ only)
+ *           npm run build:css -- --inline   (also rewrite the HTML)
  */
 
 const fs = require("fs");
@@ -58,6 +71,41 @@ function build(manifestPath) {
   return { name, blocks: files.length, bytes: out.length };
 }
 
+/*
+ * Embed the bundle into the pages that link it, and stop the Google Fonts
+ * stylesheet from blocking the first paint. Both are render-blocking network
+ * requests, and Firefox paints before either can arrive.
+ */
+function inlineInto(html) {
+  const file = path.join(ROOT, html);
+  let src = fs.readFileSync(file, "utf8");
+
+  const link = src.match(
+    /( *)<link rel="stylesheet" href="(?:\.\/|\/)assets\/([a-z-]+\.css)" \/>\n/
+  );
+  if (!link) return null;
+
+  const [, indent, bundle] = link;
+  const css = fs.readFileSync(path.join(OUT, bundle), "utf8");
+
+  src = src.replace(
+    link[0],
+    `${indent}<style>\n${css.trimEnd()}\n${indent}</style>\n`
+  );
+
+  // Load the web fonts without blocking rendering. font-display: swap is
+  // already set, so text paints in the fallback face and swaps when ready.
+  src = src.replace(
+    /( *)<link\s*\n\s*href="(https:\/\/fonts\.googleapis\.com\/[^"]+)"\s*\n\s*rel="stylesheet"\s*\n\s*\/>/,
+    (_m, ind, href) =>
+      `${ind}<link rel="preload" as="style" href="${href}" onload="this.onload=null;this.rel='stylesheet'" />\n` +
+      `${ind}<noscript><link rel="stylesheet" href="${href}" /></noscript>`
+  );
+
+  fs.writeFileSync(file, src);
+  return { html, bundle, bytes: css.length };
+}
+
 const manifests = fs
   .readdirSync(SRC)
   .filter((f) => f.endsWith(".css"))
@@ -78,4 +126,26 @@ for (const m of manifests) {
     failed = true;
   }
 }
+
+if (process.argv.includes("--inline")) {
+  const pages = fs.readdirSync(ROOT).filter((f) => f.endsWith(".html"));
+  let inlined = 0;
+  for (const p of pages) {
+    try {
+      const r = inlineInto(p);
+      if (r) {
+        console.log(`${r.html}  inlined ${r.bundle} (${(r.bytes / 1024).toFixed(1)} KB)`);
+        inlined++;
+      }
+    } catch (err) {
+      console.error(`ERROR ${p}: ${err.message}`);
+      failed = true;
+    }
+  }
+  if (inlined === 0) {
+    console.error("ERROR --inline matched no pages; the link markup may have changed");
+    failed = true;
+  }
+}
+
 process.exit(failed ? 1 : 0);
