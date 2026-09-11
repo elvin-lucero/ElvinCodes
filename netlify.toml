@@ -1,5 +1,8 @@
 [build]
-  # Static site — no build step; serve the repo root as-is.
+  # Concatenates the block stylesheets into assets/ before publishing.
+  # The built files are committed too, so the site still works if opened
+  # straight from disk without running the build.
+  command = "npm run build:css"
   publish = "."
 
 [[headers]]

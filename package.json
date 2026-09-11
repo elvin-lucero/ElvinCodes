@@ -1,0 +1,9 @@
+{
+  "name": "elvincodes",
+  "private": true,
+  "description": "Personal portfolio site for Elvin Lucero",
+  "scripts": {
+    "build:css": "node scripts/build-css.js",
+    "build": "npm run build:css"
+  }
+}
