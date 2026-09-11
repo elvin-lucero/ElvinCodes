@@ -477,6 +477,10 @@ body {
 
 img {
   max-width: 100%;
+  /* Images carry width/height attributes so the browser can reserve their space
+     before CSS loads. Without this, any rule that sets only width lets the
+     height attribute apply literally and the image is stretched. */
+  height: auto;
 }
 
 a {
