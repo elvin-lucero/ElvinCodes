@@ -65,6 +65,12 @@
   .services__list {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* With an odd number of cards the last one would sit alone in a half-empty
+     row. Let it span instead, so the block stays square however many there are. */
+  .services__list > .service:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
 }
 
 /* ===== Process ===== */
