@@ -1,5 +1,9 @@
 [build]
-  # Static site — no build step; serve the repo root as-is.
+  # Concatenates the block stylesheets, then embeds them into each page and
+  # makes the web font request non-blocking. Firefox paints before external
+  # stylesheets arrive, so anything left as a request can flash unstyled.
+  # The committed HTML keeps its <link>; only the deployed copy is rewritten.
+  command = "npm run build"
   publish = "."
 
 [[headers]]

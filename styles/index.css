@@ -1,0 +1,17 @@
+/* Manifest — the build concatenates these, in order, into assets/index.css.
+   Edit this list to add or remove a block; never edit assets/ by hand. */
+@import url(../vendor/normalize.css);
+@import url(../blocks/colors.css);
+@import url(../fonts/fonts.css);
+@import url(../blocks/page.css);
+@import url(../blocks/nav.css);
+@import url(../blocks/header.css);
+@import url(../blocks/section-heading.css);
+@import url(../blocks/button.css);
+@import url(../blocks/content.css);
+@import url(../blocks/about.css);
+@import url(../blocks/skills.css);
+@import url(../blocks/projects.css);
+@import url(../blocks/project.css);
+@import url(../blocks/contact.css);
+@import url(../blocks/footer.css);
