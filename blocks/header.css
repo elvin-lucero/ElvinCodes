@@ -96,7 +96,11 @@
   line-height: 1.05;
   letter-spacing: -0.015em;
   margin: 6px 0 0;
-  max-width: 16ch;
+  /* 16ch in Inter, expressed in em. The ch unit is the width of the font's "0"
+     glyph, which differs by 13% between Inter and the fallback — enough to
+     resize this whole centred block when the webfont swaps in. em is relative
+     to font-size, so it scales the same way without depending on the face. */
+  max-width: 10.79em;
   color: var(--text);
 }
 

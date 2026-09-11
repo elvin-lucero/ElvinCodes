@@ -389,8 +389,8 @@ template {
   --ring: 0 0 0 3px rgba(124, 140, 240, 0.45);
 
   /* Typography */
-  --font-display: "Inter", "Raleway", system-ui, sans-serif;
-  --font-body: "Raleway", system-ui, -apple-system, sans-serif;
+  --font-display: "Inter", "Inter Fallback", system-ui, sans-serif;
+  --font-body: "Raleway", "Raleway Fallback", system-ui, -apple-system, sans-serif;
 
   /* Layout */
   --radius: 16px;
@@ -439,6 +439,46 @@ template {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
     U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
     U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/*
+ * Metric-matched fallbacks.
+ *
+ * Even served from this origin, a webfont arrives after first paint on a cold
+ * cache, so text renders in the fallback and then swaps. If the fallback
+ * occupies different space, that swap visibly resizes headings and the logo.
+ *
+ * These adjust a local Arial so it occupies the same width as the real face —
+ * the glyphs still change on swap, but nothing moves. The values were found by
+ * measurement rather than arithmetic: a range of size-adjust values was applied
+ * to a probe face and compared against the real font until the rendered width
+ * matched to under a pixel across a long sample string. Deriving them from the
+ * ratio of advance widths gave a visibly wrong answer.
+ *
+ * Liberation Sans is metric-compatible with Arial, so it is a safe second
+ * source. Helvetica Neue is not, and is deliberately absent.
+ */
+
+@font-face {
+  font-family: "Inter Fallback";
+  font-style: normal;
+  font-weight: 100 900;
+  src: local("Arial"), local("Liberation Sans");
+  size-adjust: 107.25%;
+  ascent-override: 90.44%;
+  descent-override: 22.38%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Raleway Fallback";
+  font-style: normal;
+  font-weight: 100 900;
+  src: local("Arial"), local("Liberation Sans");
+  size-adjust: 100.1%;
+  ascent-override: 93.91%;
+  descent-override: 22.98%;
+  line-gap-override: 0%;
 }
 
 /* ===== blocks/page.css ===== */
