@@ -23,7 +23,7 @@
   font-family: var(--font-display);
   font-size: 22px;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.005em;
   text-decoration: none;
   color: var(--text);
 }
