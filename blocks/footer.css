@@ -15,7 +15,7 @@
 }
 
 .footer__brand {
-  max-width: 34ch;
+  max-width: 20.8em; /* was 34ch */
 }
 
 .footer__title {

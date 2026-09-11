@@ -7,7 +7,7 @@
 
 .about__body {
   /* Heading stays centered; prose reads left-aligned at this length */
-  max-width: 62ch;
+  max-width: 37.94em; /* was 62ch */
   margin: 0 auto;
   text-align: left;
   color: var(--text-muted);

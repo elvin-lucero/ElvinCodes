@@ -164,7 +164,7 @@
 
 .notfound__text {
   margin: 0;
-  max-width: 46ch;
+  max-width: 28.15em; /* was 46ch */
   color: var(--text-muted);
 }
 

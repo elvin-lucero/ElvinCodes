@@ -6,7 +6,7 @@
 }
 
 .services__description {
-  max-width: 62ch;
+  max-width: 37.94em; /* was 62ch */
   margin: 0 auto;
   color: var(--text-muted);
   font-size: clamp(15px, 2vw, 18px);
@@ -130,7 +130,7 @@
 
 /* ===== Footnote ===== */
 .services__note {
-  max-width: 60ch;
+  max-width: 36.71em; /* was 60ch */
   margin: clamp(30px, 4vw, 40px) auto 0;
   color: var(--text-faint);
   font-size: 14px;
