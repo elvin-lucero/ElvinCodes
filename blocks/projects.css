@@ -23,7 +23,7 @@
   align-items: center;
   gap: 14px;
   margin: 0 0 20px;
-  font-family: "Space Grotesk", "Raleway", sans-serif;
+  font-family: var(--font-display);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.14em;

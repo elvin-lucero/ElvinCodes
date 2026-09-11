@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   background-color: var(--bg);
   color: var(--text);
-  font-family: "Raleway", system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
