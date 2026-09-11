@@ -61,4 +61,55 @@
   revealTargets.forEach(function (el) {
     observer.observe(el);
   });
+
+  // ===== Contact form =====
+  // The form works without this: it posts natively to /api/contact and the
+  // function redirects to /thanks.html. This just keeps people on the page.
+  const contactForm = document.getElementById("contact-form");
+  const contactStatus = document.getElementById("contact-status");
+
+  if (contactForm && contactStatus && window.fetch) {
+    const setStatus = function (text, kind) {
+      contactStatus.textContent = text;
+      contactStatus.hidden = !text;
+      contactStatus.classList.toggle("contact__status_error", kind === "error");
+      contactStatus.classList.toggle("contact__status_success", kind === "success");
+    };
+
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (contactForm.classList.contains("contact__form_sending")) return;
+
+      contactForm.classList.add("contact__form_sending");
+      setStatus("Sending\u2026", null);
+
+      fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: { Accept: "application/json" },
+      })
+        .then(function (response) {
+          return response.json().then(function (data) {
+            return { ok: response.ok, data: data };
+          });
+        })
+        .then(function (result) {
+          if (!result.ok || !result.data.ok) {
+            throw new Error(result.data.error || "Something went wrong.");
+          }
+          contactForm.reset();
+          setStatus("Thanks \u2014 your message is on its way. I'll reply soon.", "success");
+        })
+        .catch(function (error) {
+          setStatus(
+            error.message ||
+              "Couldn't send that. Email me at elvinlucero35@gmail.com instead.",
+            "error"
+          );
+        })
+        .then(function () {
+          contactForm.classList.remove("contact__form_sending");
+        });
+    });
+  }
 })();

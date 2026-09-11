@@ -413,13 +413,11 @@
 
           <form
             class="contact__form"
+            id="contact-form"
             name="contact"
             method="POST"
-            action="/thanks.html"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
+            action="/api/contact"
           >
-            <input type="hidden" name="form-name" value="contact" />
             <p class="contact__hp">
               <label
                 >Don't fill this out if you're human:
@@ -466,6 +464,14 @@
             <button class="btn btn_primary contact__submit" type="submit">
               Send message
             </button>
+
+            <p
+              class="contact__status"
+              id="contact-status"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></p>
           </form>
         </section>
       </main>

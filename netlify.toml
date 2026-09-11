@@ -2,6 +2,10 @@
   # Static site — no build step; serve the repo root as-is.
   publish = "."
 
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
 [[headers]]
   for = "/*"
   [headers.values]

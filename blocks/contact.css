@@ -101,3 +101,23 @@
     text-align: center;
   }
 }
+
+/* Submission status — only ever shown by JS; the no-JS path redirects instead. */
+.contact__status {
+  margin: 14px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.contact__status_error {
+  color: var(--lobster-pink);
+}
+
+.contact__status_success {
+  color: #6ee7a8;
+}
+
+.contact__form_sending .contact__submit {
+  opacity: 0.6;
+  pointer-events: none;
+}
