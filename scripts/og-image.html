@@ -1,0 +1,133 @@
+<!doctype html>
+<!--
+  Template for images/og-image.png, the 1200x630 card shown when the site is
+  shared on LinkedIn, Slack, iMessage and the like.
+
+  Uses the site's own fonts, palette and brand mark, so it stays in step with
+  the site. Regenerate after changing the title or copy:
+
+    npx -p playwright node scripts/render-og-image.js
+
+  Paths are root-absolute: the render script serves the repo root.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @font-face {
+        font-family: "Inter";
+        font-weight: 100 900;
+        src: url("/fonts/files/inter-latin-v20.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Raleway";
+        font-weight: 100 900;
+        src: url("/fonts/files/raleway-latin-v37.woff2") format("woff2");
+      }
+
+      html,
+      body {
+        margin: 0;
+      }
+
+      .card {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 107px 85px 0;
+        background-color: #17181d;
+        color: #f2f3d9;
+        font-family: "Raleway", sans-serif;
+      }
+
+      /* Same ambient glow as .page::before on the site */
+      .card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(60% 50% at 15% 0%, rgba(87, 107, 199, 0.22), transparent 60%),
+          radial-gradient(50% 45% at 90% 10%, rgba(205, 93, 103, 0.16), transparent 60%),
+          radial-gradient(45% 40% at 50% 100%, rgba(166, 177, 225, 0.12), transparent 70%);
+      }
+
+      .card > * {
+        position: relative;
+      }
+
+      .mark {
+        display: block;
+        width: 112px;
+        height: 112px;
+        border-radius: 26px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      }
+
+      .name {
+        margin: 46px 0 0;
+        font-family: "Inter", sans-serif;
+        font-size: 78px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.015em;
+      }
+
+      .title {
+        display: inline-block;
+        margin: 16px 0 0;
+        font-family: "Inter", sans-serif;
+        font-size: 44px;
+        font-weight: 600;
+        line-height: 1.15;
+        letter-spacing: -0.005em;
+        background: linear-gradient(120deg, #576bc7, #a6b1e1 55%, #cd5d67);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .desc {
+        max-width: 760px;
+        margin: 24px 0 0;
+        font-size: 26px;
+        line-height: 1.5;
+        color: rgba(242, 243, 217, 0.68);
+      }
+
+      .url {
+        margin: 22px 0 0;
+        font-family: "Inter", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.005em;
+      }
+
+      .url span {
+        color: #a6b1e1;
+      }
+
+      .caret {
+        display: inline-block;
+        width: 3px;
+        height: 0.9em;
+        margin-left: 7px;
+        transform: translateY(0.12em);
+        border-radius: 1px;
+        background: #a6b1e1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img class="mark" src="/images/brand-icon.png" alt="" />
+      <h1 class="name">Elvin Lucero</h1>
+      <div class="title">Web Developer &amp; Local SEO Specialist</div>
+      <p class="desc">
+        Custom websites for businesses, built by hand in New York City.
+      </p>
+      <p class="url">elvin<span>codes</span>.com<i class="caret"></i></p>
+    </div>
+  </body>
+</html>

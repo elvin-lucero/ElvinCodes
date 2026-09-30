@@ -931,6 +931,11 @@ a {
 }
 
 .hero__title-accent {
+  /* The title starts on its own line and wraps evenly, so a long title never
+     leaves its first word stranded at the end of the greeting. Browsers
+     without text-wrap: balance still wrap normally. */
+  display: block;
+  text-wrap: balance;
   background: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;

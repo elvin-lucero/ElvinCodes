@@ -1,4 +1,4 @@
-# Elvin Lucero | Software Engineer
+# Elvin Lucero | Web Developer & Local SEO Specialist
 
 Personal portfolio site showcasing my web development projects.
 
