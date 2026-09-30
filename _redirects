@@ -1,0 +1,5 @@
+# Cloudflare Pages reads this file for redirects.
+# The apex is canonical — every canonical tag and the sitemap point at it — so
+# www redirects to it permanently. Netlify did this through a domain setting
+# rather than a file, so there was nothing to port.
+https://www.elvincodes.com/* https://elvincodes.com/:splat 301
