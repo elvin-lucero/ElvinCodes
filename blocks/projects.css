@@ -45,7 +45,7 @@
   grid-template-columns: 1fr;
 }
 
-.project.project_featured .project__link {
+.project.project_featured .project__links {
   margin-top: 12px;
 }
 

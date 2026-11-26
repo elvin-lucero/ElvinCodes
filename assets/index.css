@@ -1170,7 +1170,7 @@ a {
   grid-template-columns: 1fr;
 }
 
-.project.project_featured .project__link {
+.project.project_featured .project__links {
   margin-top: 12px;
 }
 
@@ -1294,6 +1294,22 @@ a {
 .project__link:hover {
   color: var(--lobster-pink);
   gap: 12px;
+}
+
+/* A row of links when a card has more than one. The row takes over the
+   push-to-bottom spacing, so the links inside sit flush with each other. */
+.project__links {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 4px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.project__links .project__link {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* ===== Title row + live status ===== */
